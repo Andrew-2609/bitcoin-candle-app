@@ -1,4 +1,4 @@
-type ICandle = {
+export type ICandle = {
   currency: string
   finalDateTime: Date
   open: number
