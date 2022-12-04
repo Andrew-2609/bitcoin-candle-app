@@ -12,7 +12,7 @@ const http = axios.create({
 })
 
 @Module({ name: 'CandleStore' })
-export class CandleStore extends VuexModule {
+export default class CandleStore extends VuexModule {
   private _candles: Candle[] = []
 
   get candles(): CandleChartEntry[] {
