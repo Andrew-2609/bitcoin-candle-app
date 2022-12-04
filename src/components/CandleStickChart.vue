@@ -7,6 +7,7 @@
 import { Options, Vue } from 'vue-class-component'
 import VueApexCharts from 'vue3-apexcharts'
 import { Prop } from 'vue-property-decorator'
+import { CandleChartEntry } from '@/store/modules/CandleStore'
 
 @Options({
   components: {
@@ -15,7 +16,7 @@ import { Prop } from 'vue-property-decorator'
 })
 export default class CandleStickChart extends Vue {
   @Prop()
-  candles = []
+  candles!: CandleChartEntry[]
 
   chartOptions = {
     chart: {

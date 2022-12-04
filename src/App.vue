@@ -9,7 +9,7 @@ import { getModule } from 'vuex-module-decorators'
 import CandleStickChart from './components/CandleStickChart.vue'
 import Header from './components/Header.vue'
 import store from './store'
-import CandleStore from './store/modules/CandleStore'
+import CandleStore, { CandleChartEntry } from './store/modules/CandleStore'
 
 @Options({
   components: {
@@ -24,7 +24,7 @@ export default class App extends Vue {
     this.candleStore.loadInitialCandles()
   }
 
-  get candles() {
+  get candles(): CandleChartEntry[] {
     return this.candleStore.candles
   }
 }

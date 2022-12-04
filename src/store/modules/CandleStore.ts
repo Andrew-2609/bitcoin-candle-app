@@ -2,7 +2,7 @@ import { Candle, ICandle } from '@/models/Candle'
 import axios from 'axios'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
-type CandleChartEntry = {
+export type CandleChartEntry = {
   x: string
   y: [number, number, number, number]
 }
