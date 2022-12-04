@@ -36,9 +36,13 @@ export default class CandleStickChart extends Vue {
     }
   }
 
-  series = [{
-    data: this.candles
-  }]
+  get series() {
+    const series = [{
+      data: this.candles
+    }]
+
+    return series
+  }
 }
 </script>
 
